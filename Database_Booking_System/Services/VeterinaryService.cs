@@ -85,7 +85,7 @@ namespace Database_Booking_System.Services
             }
             catch (Exception ex)
             {
-                return null;
+                return null!;
             }
         }
         public async Task<bool> UpdateBookingId(int veterinaryId, int bookingId)
@@ -105,7 +105,6 @@ namespace Database_Booking_System.Services
             }
             catch (Exception ex)
             {
-                // Handle the exception (log, throw, etc.)
                 return false;
             }
         }

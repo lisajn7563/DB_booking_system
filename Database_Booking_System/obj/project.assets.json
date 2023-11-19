@@ -4065,11 +4065,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\skola\\Database_Booking_System\\Database_Booking_System\\Database_Booking_System.csproj",
+      "projectUniqueName": "C:\\skola\\lisajn7563\\DB_booking_system\\Database_Booking_System\\Database_Booking_System.csproj",
       "projectName": "Database_Booking_System",
-      "projectPath": "C:\\skola\\Database_Booking_System\\Database_Booking_System\\Database_Booking_System.csproj",
+      "projectPath": "C:\\skola\\lisajn7563\\DB_booking_system\\Database_Booking_System\\Database_Booking_System.csproj",
       "packagesPath": "C:\\Users\\lisaj\\.nuget\\packages\\",
-      "outputPath": "C:\\skola\\Database_Booking_System\\Database_Booking_System\\obj\\",
+      "outputPath": "C:\\skola\\lisajn7563\\DB_booking_system\\Database_Booking_System\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

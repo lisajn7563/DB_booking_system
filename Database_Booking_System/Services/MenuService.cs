@@ -46,7 +46,7 @@ namespace Database_Booking_System.Services
                 int option;
                 while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 3)
                 {
-                    Console.Write("Något fel uppstod, välj från 1-3");
+                    Console.WriteLine("Något fel uppstod, välj från 1 - 3");
                 }
 
                 switch (option)
@@ -75,6 +75,8 @@ namespace Database_Booking_System.Services
         }
         public async Task Create()
         {
+            // (Här är hur jag lägger till mina vetrinärer 1gång som jag sedan kommenterar bort för att inte få dubbletter.)
+
             //var veterinary = new Veterinary
             //{
             //    FirstName = "Kalle",
@@ -86,7 +88,7 @@ namespace Database_Booking_System.Services
             //var vet = new Veterinary
             //{
             //    FirstName = "Sandra",
-            //    LastName = "´Svensson",
+            //    LastName = "Svensson",
 
             //};
             //await _veterinaryService.AddVeterinary(vet);
@@ -106,7 +108,7 @@ namespace Database_Booking_System.Services
             //};
             //await _veterinaryService.AddVeterinary(veteri);
 
-            //await _veterinaryService.AddVeterinary(vete);
+            
             //var veterin = new Veterinary
             //{
             //    FirstName = "Johan",
@@ -204,7 +206,7 @@ namespace Database_Booking_System.Services
             Console.WriteLine();
             Console.WriteLine("Kund är nu skapad");
             Console.WriteLine();
-            Console.WriteLine("dataum för besöket: ");
+            Console.WriteLine("datum för besöket: ");
             booking.Date = Console.ReadLine();
             Console.WriteLine("Tid för besöket: ");
             booking.Time = Console.ReadLine();
@@ -225,8 +227,6 @@ namespace Database_Booking_System.Services
             chosenVeterinary.BookingId = c;
             await _veterinaryService.UpdateBookingId(chosenVeterinary.Id, c.Id);
             
-            // ta bort allt i databasen kolumnsen(utan veterinary) och skapa nya kunder.
-            // städa upp och snygga till i koden
             
             Console.Clear();
 
@@ -257,7 +257,7 @@ namespace Database_Booking_System.Services
                     Console.WriteLine($"Vetrinär: {booking.Veterinary.FirstName} {booking.Veterinary.LastName}");
                     Console.WriteLine($"Kund: {booking.Customer.FirstName} {booking.Customer.LastName}");
                     Console.WriteLine($"Djur: {booking.Customer.Animal.AnimalType}");
-                    Console.WriteLine($"Orsak till besökare: {booking.Customer.Animal.Cause}");
+                    Console.WriteLine($"Orsak till besöket: {booking.Customer.Animal.Cause}");
 
                 }
 
@@ -270,7 +270,7 @@ namespace Database_Booking_System.Services
             {
                 Console.WriteLine();
                 Console.WriteLine();
-                Console.WriteLine("SS Välj mellan 1 - 3 ");
+                Console.WriteLine(" Välj mellan 1 - 3 ");
                 Console.WriteLine();
                 Console.WriteLine("1. Ta bort bokning");
                 Console.WriteLine();
@@ -283,7 +283,7 @@ namespace Database_Booking_System.Services
                 int option;
                 while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 3)
                 {
-                    Console.Write("Något fel uppstod, välj från 1-3");
+                    Console.WriteLine("Något fel uppstod, välj från 1 - 3");
                 }
 
                 switch (option)
@@ -354,11 +354,9 @@ namespace Database_Booking_System.Services
             var bookningList = await GetBookingsAsync();
             var indexList = bookningList.ToList();
 
-            //var chosen = new Booking();
 
             if (bookningList != null && bookningList.Any())
             {
-                //if (bookningList.Count() > 0)
                 {
 
                     Console.WriteLine("Välj en av bokningarna. Skriv in nummret för att redigera bokningen");
@@ -383,7 +381,7 @@ namespace Database_Booking_System.Services
                         Console.WriteLine("lägg till ny tid");
                         string newTime = Console.ReadLine();
 
-                        Console.WriteLine(" lägg till nytt datum");
+                        Console.WriteLine("lägg till nytt datum");
                         string newDate = Console.ReadLine();
 
                         var updatedBooking = new BookingEntity
@@ -403,9 +401,6 @@ namespace Database_Booking_System.Services
                         Console.WriteLine("ogiltigt val");
                     }
 
-
-                    //await _bookingService.UpdateAsync(editBooking);
-                    //bool updateResult = await _bookingService.UpdateAsync(chosenBookingId, new BookingEntity
                 }
       
 

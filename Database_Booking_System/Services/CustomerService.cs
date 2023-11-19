@@ -93,7 +93,6 @@ namespace Database_Booking_System.Services
             }
             catch (Exception ex)
             {
-                // Handle the exception (log, throw, etc.)
                 return false;
             }
         }

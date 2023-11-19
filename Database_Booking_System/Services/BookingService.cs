@@ -85,7 +85,7 @@ namespace Database_Booking_System.Services
                 var bookings = await _context.Set<BookingEntity>()
                     .Include(booking => booking.Customer)
                     .ThenInclude(customer => customer.Address)
-                        .Include(booking => booking.Customer.Animal)  // Include AnimalEntity for the Customer
+                        .Include(booking => booking.Customer.Animal)  
                         .Include(booking => booking.Veterinary)
                         .ToListAsync();
 
